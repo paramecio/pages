@@ -39,6 +39,8 @@ def index(page_id=0, slug=''):
         page.set_conditions('WHERE slugify=%s', [slug])
 
     arr_page=page.select_a_row_where()
+    
+    conn.close()
 
     if arr_page:
 
